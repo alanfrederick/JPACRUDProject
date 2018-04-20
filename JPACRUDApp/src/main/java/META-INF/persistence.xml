@@ -8,15 +8,16 @@
 		<provider>org.hibernate.jpa.HibernatePersistenceProvider
 		
     </provider>
-		<!-- <class>com.skilldistillery.jpacrud.entities.!CHANGEME</class> -->
+		<class>com.skilldistillery.jpacrud.entities.Ingredient</class>
+
 
 
 		<properties>
 			<property name="javax.persistence.jdbc.url"
-				value="jdbc:mysql://localhost:3306/CHANGEME" />
-			<property name="javax.persistence.jdbc.user" value="!CHANGEME" />
+				value="jdbc:mysql://localhost:3306/baseballdb" />
+			<property name="javax.persistence.jdbc.user" value="baseball" />
 			<property name="javax.persistence.jdbc.password"
-				value="!CHANGEME" />
+				value="baseball" />
 			<property name="javax.persistence.jdbc.driver"
 				value="com.mysql.jdbc.Driver" />
 
