@@ -8,17 +8,9 @@
 <title>Show Page</title>
 </head>
 <body>
-	<form action="getTeam.do" method="GET">
-		<input type="text" name="teamName" /> <input type="submit"
-			value="Find Team by Name" />
-	</form>
-		<form action="getTeamId.do" method="GET">
-		<input type="int" name="teamId" /> <input type="submit"
-			value="Find Team by Id" />
-	</form>
 	<div>
 		<ul>
-			<c:forEach items="${teams}" var="team">
+			<c:forEach items="${team}" var="team">
 				<h5>
 					<li>Team Name: ${team.name}</li>
 					<li>Team City: ${team.city }</li>
