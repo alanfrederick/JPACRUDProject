@@ -11,6 +11,7 @@
 	<div>
 		<h5>
 				<li>Team Name: ${team.name}</li>
+				<li>Team ID: ${team.id}</li>
 				<li>Team City: ${team.city }</li>
 				<li>Team State: ${team.state }</li>
 				<li>Team Manager:${team.managerFirstName }
@@ -18,7 +19,10 @@
 				<li>Team Trivia: ${team.teamTrivia }</li>
 		</h5>
 	</div>
-
+	<form action="update.do" method="GET">
+		<input type="hidden" name="id" value="${team.id }"/> <input type="submit"
+			value="Update" />
+	</form>
 
 </body>
 </html>

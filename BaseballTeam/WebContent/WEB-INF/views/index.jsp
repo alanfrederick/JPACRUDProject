@@ -8,28 +8,27 @@
 <title>Show Page</title>
 </head>
 <body>
+
+
 	<form action="getTeam.do" method="GET">
 		<input type="text" name="teamName" /> <input type="submit"
 			value="Find Team by Name" />
 	</form>
-		<form action="getTeamId.do" method="GET">
+	<br>
+
+	<form action="getTeamId.do" method="GET">
 		<input type="int" name="teamId" /> <input type="submit"
 			value="Find Team by Id" />
 	</form>
-	<div>
-		<ul>
-			<c:forEach items="${teams}" var="team">
-				<h5>
-					<li>Team Name: ${team.name}</li>
-					<li>Team City: ${team.city }</li>
-					<li>Team State: ${team.state }</li>
-					<li>Team Manager:${team.managerFirstName }
-						${team.managerLastName}</li>
-					<li>Team Trivia: ${team.teamTrivia }</li>
-				</h5>
-			</c:forEach>
-		</ul>
-	</div>
+
+<br>
+
+
+		<form action="deleteTeam.do" method="POST">
+		<input type="text" name="id" /> <input type="submit"
+			value="Delete Team by Id" />
+	</form>
+	
 
 </body>
 </html>

@@ -7,17 +7,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Show Page</title>
 </head>
-
-	<form action="getTeam.do" method="GET">
-		<input type="text" name="teamName" /> <input type="submit"
-			value="Find Team by Name" />
-	</form>
 <body>
 	<div>
 		<ul>
-			<c:forEach items="${team}" var="team">
 				<h5>
-					<li>Team ID: ${team.id}</li>
 					<li>Team Name: ${team.name}</li>
 					<li>Team City: ${team.city }</li>
 					<li>Team State: ${team.state }</li>
@@ -25,13 +18,19 @@
 						${team.managerLastName}</li>
 					<li>Team Trivia: ${team.teamTrivia }</li>
 				</h5>
-			</c:forEach>
 		</ul>
 	</div>
 	
-		<form action="update.do" method="GET">
-		<input type="hidden" name="id" value="${team.id }"/> <input type="submit"
-			value="Update" />
+			<form action="updateTeam.do" method="POST">
+		<input type="hidden" name="id" value="${team.id }"/> <br>
+		<input type="text" name="name" placeholder="Team Name" /> <br>
+		<input type="text" name="league" placeholder="Team League" /> <br>
+		<input type="text" name="city" placeholder="Team City"/> <br>
+		<input type="text" name="state" placeholder="Team State" /> <br>
+		<input type="text" name="managerFirstName" placeholder="Manager First Name"/> <br> 
+		<input type="text" name="managerLastName" placeholder="Manager Last Name" />  <br>
+		<input type="text" name="teamTrivia" placeholder="Trivia about team" /> <br>
+		<input type="submit" value="Submit team" /> <br>
 	</form>
 
 </body>
